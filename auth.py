@@ -7,12 +7,9 @@ from dotenv import load_dotenv
 
 load_dotenv(os.path.join('TRIAL_JWT', '.env'))
 
-# SECRET_KEY = os.getenv('SECRET_KEY')
-# ALGORITHM = os.getenv('ALGORITHM')
-# ACCESS_TOKEN_EXPIRE_MINUTES=os.getenv('ACCESS_TOKEN_EXPIRE_MINUTES')
-SECRET_KEY = "981291fb7d48281aaf1859bd6ef775c20d0eaf862d1f3ef65db4e4db25b1b2c7"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES=30
+SECRET_KEY = os.getenv('SECRET_KEY')
+ALGORITHM = os.getenv('ALGORITHM')
+ACCESS_TOKEN_EXPIRE_MINUTES=os.getenv('ACCESS_TOKEN_EXPIRE_MINUTES')
 REFRESH_TOKEN_EXPIRE_MINUTES=60*24*7
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
